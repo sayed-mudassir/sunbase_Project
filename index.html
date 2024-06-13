@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-screen" class="">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="authenticateUser()">Login</button>
+            <button id="getCustomerListButton">getCustomerListButton</button>
+        </div>
+        <div id="customer-list-screen" class="hide">
+            <h2>Customer List</h2>
+            <button onclick="showAddCustomerForm()">Add New Customer</button>
+            <button onclick="Sync()">Sync</button>
+                <input type="text" id="search" placeholder="enter customer id to seacrh">
+                <button id="search-button" onclick="getCustomerById()">search</button>
+            
+            <table id="customer-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Street</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="add-customer-screen" class="hide">
+            <h2>Add New Customer</h2>
+            <form id="customer-form">
+                <input type="text" id="first-name" placeholder="First Name">
+                <input type="text" id="last-name" placeholder="Last Name">
+                <input type="text" id="street" placeholder="Street">
+                <input type="text" id="address" placeholder="Address">
+                <input type="text" id="city" placeholder="City">
+                <input type="text" id="state" placeholder="State">
+                <input type="email" id="email" placeholder="Email">
+                <input type="text" id="phone" placeholder="Phone">
+                <button type="button" onclick="addCustomer()">Add Customer</button>
+            </form>
+        </div>
+        <div id="update-customer-screen" class="hide">
+            <h2>update New Customer</h2>
+            <form id="update-form">
+                <input type="text" id="firstName" placeholder="First Name">
+                <input type="text" id="lastName" placeholder="Last Name">
+                <input type="text" id="Street" placeholder="Street">
+                <input type="text" id="Address" placeholder="Address">
+                <input type="text" id="City" placeholder="City">
+                <input type="text" id="State" placeholder="State">
+                <input type="email" id="Email" placeholder="Email">
+                <input type="text" id="Phone" placeholder="Phone">
+                <button type="button" id="updateCustomer">update customer</button>
+            </form>
+        </div>
+        <h2 id="response"></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
